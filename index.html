@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafsa ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- القلوب اللي بتطلع فوق -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- 1. شاشة الباسورد -->
+    <div id="passwordPage" class="page active">
+        <div class="card">
+            <h2>مرحباً ❤️</h2>
+            <p>ادخلي كلمة السر لرؤية المفاجأة:</p>
+            <input type="password" id="passwordInput" placeholder="كلمة السر...">
+            <button onclick="checkPassword()">دخول</button>
+            <p id="errorMsg" class="error"></p>
+        </div>
+    </div>
+
+    <!-- 2. الصفحة الرئيسية -->
+    <div id="mainPage" class="page">
+        <!-- الاسم المزخرف -->
+        <h1 class="decorated-name">✨ 𝓗𝓪𝓯𝓼𝓪 ✨</h1>
+
+        <!-- قسم الأغنية -->
+        <div class="section shadow-box">
+            <h3>شغلى الاغنيه</h3>
+            <!-- غير song.mp3 لاسم ملف الأغنية عندك -->
+            <audio controls src="song.mp3"></audio> 
+        </div>
+
+        <!-- قسم الشعر -->
+        <div class="section shadow-box">
+            <h3>✍️ كلام من القلب</h3>
+            <p  class="poem">
+                <br>مضى عام جديد من عمرك
+                و اذا بكل عام يزداد حبى لك
+                من يدرى كم من العمر سيمضى
+                اتنمى ان اعيش كل لحظه معك
+                و عام جديد ملىء بلمسات جميله 
+                كجمالك
+
+                انتى هديتى فى هذه الدنيا 
+                و ساكون فخورا بوجودك معى
+            </p>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="buttons-container">
+            <button onclick="showPage('chatsPage')">📱 الاول الشاتات</button>
+            <button onclick="showPage('photosPage')">🖼️ الثانى الصور</button>
+            <button onclick="showPage('endPage')">✨ اخيرا النهاية</button>
+        </div>
+    </div>
+
+    <!-- 3. صفحة الشاتات -->
+    <div id="chatsPage" class="page">
+        <h2>💬 شاتاتنا الذكرى</h2>
+        
+        <div class="gallery-item">
+            <img src="chat1.jpg" alt="شات 1">
+            <p> فى اليوم ده كنتى مدايقه و فى الاخر خليتك تضحكى❤️</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="chat2.jpg" alt="شات 2">
+            <p> هنا بقا كان اول مره تقوليها صراحتا وربنا 
+                انا كنت بتنطط فى الاوضه من الفرحه 
+                حسيت بشعور غريب اول مره احسو 
+                بس الاحساس ده كان مخلينى فرحاااان فشخ ❤️</p>
+        </div>
+
+        <div class="gallery-item"> 
+            <img src="chat3.jpg" alt="3 شات">
+            <p>على قد ما الرساله دى و انا بقراها زعلتنى لانك مفكرانى
+                زى زى اى حد بس فرحت انك اتكلمتى بصراحه
+                ساعتها حبيتك اكتر انا بردو مكنتش ببادر و بادرت عشانك
+                و مكنتش بحب و حبيتك
+                مكنتش بسهر لحد و سهرتلك 
+                بحبك و هفضل احبك
+            </p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="chat4.jpg" alt="4 شات">
+            <p>دى بق اكتر رساله لما احمد بعتهالى زعلت اوى 
+                منمتش فى اليوم ده 
+                انا عمرى ما هنساكى يا حفصه و هفضل احبك
+            </p>
+        </div>
+
+        <button class="back-btn" onclick="showPage('mainPage')">⬅️ العودة للرئيسية</button>
+    </div>
+
+    <!-- 4. صفحة الصور -->
+    <div id="photosPage" class="page">
+        <h2>📸 ألبوم الصور</h2>
+        
+        <div class="gallery-item">
+            <img src="pic1.jpg" alt="صورة 1">
+            <p>الصوره دى اكتر صوره بحبها صحيح 
+                انتى بتقولى ان عينك ساعتها كانت وجعاكى 
+                بس انا شايف ان عنيكى قمر فى الصوره❤️</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="pic2.jpg" alt="صورة 2">
+            <p>يااا دى بقا كانت فى اول عيد مع بعض ❤️</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="pic3.jpg" alt="صورة 3">
+            <p>دى بقا صحيح عجبانى بس مديقانى 
+                رقبتك بينه يا استاذه ❤️</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="pic4.jpg" alt="صورة 4">
+            <p>بغض النظر عم ان منظر الارض خرا بس اى الرجل الصغنونه 
+                دى يخنى عسل ❤️</p>
+        </div>
+
+        <div class="gallery-item">
+            <img src="pic5.jpg" alt="صورة 5">
+            <p>دى بقا كانت اول مكلمه بنا كانت مكلمه 
+                على الجروب و الكل خرج كانت يوم 16 شهر 4 مش هنسا 
+                التاريخ ده مكنتش لسا اعترفتلك❤️</p>
+            </div>
+
+        <button class="back-btn" onclick="showPage('mainPage')">⬅️ العودة للرئيسية</button>
+    </div>
+
+    <!-- 5. صفحة النهاية -->
+    <div id="endPage" class="page">
+        <div class="card shadow-box">
+            <h2>✨ كلمة أخيرة ✨</h2>
+            <p class="final-text">
+                حرفيا يا سيسو انا كل اما بكون زعلان بتفرج على 
+            الفيديو ده و افرح و اضحك 
+        لسا بحبك يا حفصه و هفضل احبك و عمرى ما هنساكى زى ما انتى بتقولى ان انا يومين و هنساكى 
+            المفروض الموقع ده كنت اعملو عشان يكون هديه لى عيد ميلادك 
+            انتى عارفه انتى لما سبتينى اول مره عرفت ان فيها امل قولت هشتغل و اطور من
+            نفسى و فى اقرب وقت اجى اخطبك بس لما عبدو ورانى الشات بينك و بينو مش عارف او مبقتش عارف انتى بتحبينى ولا لا بس الى
+             اعرفو انى بحبك و هفضل و مش هنساكى كنت اتمنا اتكلم معاكى فى الموضوع ده 
+             و تكلمى معايه بصراحه بس شكلك مش عيزه تكلمينى و مع الوقت هتنسينى 
+             بس انا لا مش هنساكى يا حفصه
+            <button onclick="showVideo()">اضغط هنا 🎬</button>
+
+            <!-- الفيديو مخفي وهيظهر لما تضغط على الزرار -->
+            <div id="videoContainer" style="display: none; margin-top: 20px;">
+                <!-- غير video.mp4 لاسم ملف الفيديو عندك -->
+                <video controls width="100%" src="video.mp4"></video> 
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="showPage('mainPage')">⬅️ العودة للرئيسية</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
